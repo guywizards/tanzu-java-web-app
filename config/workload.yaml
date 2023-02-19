@@ -6,6 +6,7 @@ metadata:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
     app.kubernetes.io/part-of: tanzu-java-web-app
+    apps.tanzu.vmware.com/has-tests: true
 spec:
   params:
   - name: annotations
@@ -13,6 +14,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/guywizards/tanzu-java-web-app
       ref:
-        branch: main
+        branch: master
